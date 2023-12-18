@@ -12,9 +12,9 @@ print(f"I said: {x}")
 print(f"I also said: '{y}'")
 
 halariuos = False
-joke_evalusation = "Isn't that joke so funny?! {} "
+joke_evalusation = "Isn't that joke so funny?! "
 
-print(joke_evalusation.format(halariuos))
+print(joke_evalusation + str(halariuos))
 
 w = "This is the left side of..."
 e = "a stringwith a right side."
