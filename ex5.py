@@ -7,8 +7,8 @@ teeth = 'White'
 hair = 'Brown'
 
 print(f"Let's talk anbout {name}.")
-print(f"He's {height} inches tall, {height * 0.0254} meters tall.")
-print(f"He's {weight} poubds heavy, {weight * 0.45} Kg heavy.")
+print(f"He's {height} inches tall, {round(height * 0.0254, 2)} meters tall.")
+print(f"He's {weight} poubds heavy, {round(weight * 0.45)} Kg heavy.")
 print("Actually  that's not too heavy")
 print(f"He's got {eyes} eyes and {hair} hair.")
 print(f"His teeth are usually {teeth} depending on the coffe.")
