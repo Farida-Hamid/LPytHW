@@ -1,1 +1,3 @@
-Exercise 0 is to test BBEditor 👍
+I'm changing this file!
+I hope you like it.
+See and tell me.
