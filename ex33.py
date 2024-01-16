@@ -1,4 +1,4 @@
-def looper (untill):
+def looper (untill, step=1):
   i = 0
   numbers = []
 
@@ -6,7 +6,7 @@ def looper (untill):
     print(f"At the top is {i}")
     numbers.append(i)
 
-    i += 1
+    i += step
 
     print("Numbwrs now: ", numbers)
     print(f"At the bottom, is {i}")
@@ -17,3 +17,4 @@ def looper (untill):
     print(num)
 
 looper(4)
+looper(9, 3)
