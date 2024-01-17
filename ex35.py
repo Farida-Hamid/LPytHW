@@ -4,7 +4,7 @@ def gold_room():
   print("This room is full of gold. How much do you take?")
 
   choice = input("> ")
-  if "0" in choice or "1" in choice:
+  if choice in "0123456789":
     how_much = int(choice)
   else:
     dead("Man, learn to type a number.")
@@ -19,7 +19,7 @@ def bear_room():
   print("There is a bear here.")
   print("The bear has a bunch of honey.")
   print("The fat bear is in front of another door.")
-  print("How are you going to move the bear?")
+  print("How are you going to move the bear? Take honey or taunt bear?")
   bear_moved = False
 
   while True:
@@ -29,7 +29,7 @@ def bear_room():
       dead("The bear looks at you then slaps your face off.")
     elif choice == "taunt bear" and not bear_moved:
       print("The bear has moved from the door.")
-      print("You can go through it now.")
+      print("You can go through it now. Open door or not?")
       bear_moved = True
     elif choice == "taunt_bear" and bear_moved:
       dead("The bear gets off chews your leg off.")
