@@ -16,3 +16,12 @@ bulls_on_parade = Song(["They rally around tha family",
 happy_bday.sing_me_a_song()
 
 bulls_on_parade.sing_me_a_song()
+
+some_one_like_you = Song('')
+some_one_like_you.lyrics = ["Never minde I'll find someone like you",
+                            "I wish nothing but the best for you",
+                            "Don't forget me",
+                            "I bet I'll remember you said",
+                            "Sometimes ot lasts in love and some times it hurts instead"]
+
+some_one_like_you.sing_me_a_song()
