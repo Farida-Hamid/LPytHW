@@ -73,4 +73,4 @@ try:
       input("> ")
       print(f"ANSWER:  {answer}\n\n")
 except EOFError:
-    print("\nBye")
+  print("\nBye")
