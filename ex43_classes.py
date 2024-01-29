@@ -17,11 +17,11 @@ class Engine(object):
 
   def play(self):
     current_scene = self.scene_map.opening_scene()
-    last_scenen = self.scene_map.next_scense('finished')
+    last_scenen = self.scene_map.next_scene('finished')
 
     while current_scene != last_scenen:
       next_scene_name = current_scene.enter()
-      current_scene = self.scene_map.next_scense(next_scene_name)
+      current_scene = self.scene_map.next_scene(next_scene_name)
 
     # be sure to print out the last scenen
     current_scene.enter()
@@ -235,12 +235,12 @@ class Map(object):
   def __init__(self, start_scene):
     self.start_scene = start_scene
 
-  def next_scense(self, scene_name):
+  def next_scene(self, scene_name):
     val = Map.scenes.get(scene_name)
     return val
 
   def opening_scene(self):
-    return self.next_scense(self.start_scene)
+    return self.next_scene(self.start_scene)
 
 
 a_map = Map('central_corridor')
