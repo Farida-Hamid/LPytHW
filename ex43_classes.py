@@ -175,12 +175,46 @@ class TheBridge(Scene):
             Gothons can't get out. Now that the bomb is placed
             you run to the escape pod to get off this tin can. 
             """))
-
+      return 'escape_pod'
+    else:
+      print("DOES NOT COMPUTE!")
+      return "the_bridge"
 
 class EscapePod(Scene):
 
   def enter(self):
-    pass
+    print(dedent("""
+          You rush through the ship desperately trying to make it to
+          the escape pod before the whole shop explodes. It seems
+          like hardly any Gothons are on the ship, so your run is
+          clear of interference. You get to the chamber with the
+          escape pods, and now need to pick one to take. Some of
+          them could be damaged but you don't have time to look.
+          There's 5 pods, which one do you trake?
+          """))
+    
+    good_pod = randint(1,5)
+    guess = input("[pod #]> ")
+
+    if int(guess) != good_pod:
+      print(dedent("""
+            You jump into the pod {guess} and hit the eject button.
+            The pod escapes out into the void space, then
+            implodes as the hull ruptures, crushing your body into
+            jam jelly.
+            """))
+      return 'death'
+    else:
+      print(dedent("""
+            You jumo into pod {guess} and hit the eject button.
+            The pod easily slides out into space heading to the
+            planet below. As it flies to the planet, upi look
+            back and see your ship implode like a
+            bright star, taking out the Gothon ship at the same
+            time. You won!
+            """))
+      return 'finished'
+
 
 class Map(object):
 
