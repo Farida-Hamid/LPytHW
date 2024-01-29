@@ -6,7 +6,7 @@ class Scene(object):
 
   def enter(self):
     print("This scene is not yet configured.")
-    print("sSubclass it and implement enter().")
+    print("Subclass it and implement enter().")
     exit(1)
 
 
@@ -28,8 +28,17 @@ class Engine(object):
 
 class Death(Scene):
 
+  quips = [
+    "You died. You kinda suck at this.",
+    "Your Mom would be proud...if she were smarter.",
+    "Such a luser.",
+    "I have a small puppy the's better at this.",
+    "You're worse than your Dad's jokes."
+  ]
+
   def enter(self):
-    pass
+    print(Death.quips[randint(0, len(self.quips) -1)])
+    exit(1)
 
 class CentralCorridor(Scene):
 
