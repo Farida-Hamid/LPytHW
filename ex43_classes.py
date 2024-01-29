@@ -43,7 +43,62 @@ class Death(Scene):
 class CentralCorridor(Scene):
 
   def enter(self):
-    pass
+    print(dedent("""
+          The Gothons of planet percal #25 have invaded your ship and 
+          destroyed your entire crew. You are the last surviving
+          member and your last mission is to get the neutron destruct
+          bomb from Weapons Armory, put it in the bridge, and
+          blow the ship up after getting into an esca[e pod.
+            
+          You're running down the central corridor to the weapons
+          Armory when Gothon jumps out, red scaly skin, dark grimmy
+          teeth, and evil clown costume flowing around his hate
+          filled body. He's blocking the door to the Armory and
+          about to pull a weapon to blast you.
+          """))
+    
+    action = input("> ")
+
+    if action == "shoot!":
+      print(dedent("""
+            The Quick on the draw you yank out your blaster and fire
+            iit at the Gothon. His clown costume is flowing and
+            moving his nody, which thoughs off your aim.
+            Your laser hits his costume but misses him entirely.
+            this complerely ruins his brand new costume  his mother 
+            bought him, which makes him fly into an insane rage
+            and blast you repeatedly in the head until you are
+            dead. The  eats you.
+            """))
+      return 'death'
+    
+    elif action == "dodge!":
+      print(dedent("""
+            Like a world calss master, you dodge, weave, slip and
+            slide right as the Gothon's blaster crancks a laser
+            past your head. In the middle of your artful dodge
+            your foor slips and bangs your head in the metal
+            wall and the Gothon stops on your head and eats you.
+            """))
+      return 'death'
+    
+    elif action =="tell a joke":
+      print(dedent("""
+            Luckly for you, they made you learn Gothon insults in
+            the academy. You tell tha one Gothon joke you know:
+            lbhe zbgure vf sng, jura fur fvgf nebhaq gur unhfr,
+            furfvgf nebhaq gur ubhfr. The Gothon stops, tries
+            to lagh, then busts out laughing and can't move.
+            While he's laughing you run up and shoot him square in
+            the head putting him down, then jump through the
+            Weapon Armory door.
+            """))
+      return 'laser_weapon_armory'
+    
+    else:
+      print("DOES NOT COMPUTE!")
+      return 'central_corridor'
+    
 
 class LaserWeaponArmory(Scene):
 
