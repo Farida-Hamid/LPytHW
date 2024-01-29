@@ -223,14 +223,24 @@ class Finished(Scene):
 
 class Map(object):
 
+  scenes = {
+    'central_corridor': CentralCorridor(),
+    'laser_weapon_armory': LaserWeaponArmory(),
+    'the_bridge': TheBridge(),
+    'escape_pod': EscapePod(),
+    'death': Death(),
+    'finished': Finished(),
+  }
+
   def __init__(self, start_scene):
-    pass
+    self.start_scene = start_scene
 
   def next_scense(self, scene_name):
-    pass
+    val = Map.scenes.get(scene_name)
+    return val
 
   def openning_scene(self):
-    pass
+    return self.next_scense(self.start_scene)
 
 
 a_map = Map('central_corridor')
