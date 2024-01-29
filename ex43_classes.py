@@ -21,7 +21,7 @@ class Engine(object):
 
     while current_scene != last_scenen:
       next_scene_name = current_scene.enter()
-      current_scene = self.scene_map.next_scene(next_scene_name)
+      current_scene = self.scene_map.next_scense(next_scene_name)
 
     # be sure to print out the last scenen
     current_scene.enter()
@@ -239,7 +239,7 @@ class Map(object):
     val = Map.scenes.get(scene_name)
     return val
 
-  def openning_scene(self):
+  def opening_scene(self):
     return self.next_scense(self.start_scene)
 
 
