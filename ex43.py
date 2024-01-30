@@ -111,10 +111,10 @@ class LaserWeaponArmory(Scene):
         there's a keypad lock on the box and you need the code to
         get the bomb out. If you get the code wrong 10 times then
         the lock closes forever and you can't get the bomb. The
-        code is 3 digits.
+        code is one digit from 1 to 5.
         """))
     
-    code = f"{randint(1,9)}{randint(1,9)}{randint(1,9)}" 
+    code = f"{randint(1,5)}" 
     guess = input("[Keypad]> ")
     guesses = 0
 
@@ -190,14 +190,14 @@ class EscapePod(Scene):
           clear of interference. You get to the chamber with the
           escape pods, and now need to pick one to take. Some of
           them could be damaged but you don't have time to look.
-          There's 5 pods, which one do you trake?
+          There's 3 pods, which one do you trake?
           """))
     
-    good_pod = randint(1,5)
+    good_pod = randint(1,3)
     guess = input("[pod #]> ")
 
     if int(guess) != good_pod:
-      print(dedent("""
+      print(dedent(f"""
             You jump into the pod {guess} and hit the eject button.
             The pod escapes out into the void space, then
             implodes as the hull ruptures, crushing your body into
@@ -205,7 +205,7 @@ class EscapePod(Scene):
             """))
       return 'death'
     else:
-      print(dedent("""
+      print(dedent(f"""
             You jumo into pod {guess} and hit the eject button.
             The pod easily slides out into space heading to the
             planet below. As it flies to the planet, upi look
