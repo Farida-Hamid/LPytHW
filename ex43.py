@@ -104,15 +104,15 @@ class LaserWeaponArmory(Scene):
 
   def enter(self):
     print(dedent("""
-        You do a drive roll into the Weapon Armory, crouch and scan
-        the room for more Gothons that might be hidden. It's dead
-        qiet, too qiet. You stand up and run to the far side of
-        the room and find the neutron bomb in its container.
-        there's a keypad lock on the box and you need the code to
-        get the bomb out. If you get the code wrong 10 times then
-        the lock closes forever and you can't get the bomb. The
-        code is one digit from 1 to 5.
-        """))
+          You do a drive roll into the Weapon Armory, crouch and scan
+          the room for more Gothons that might be hidden. It's dead
+          qiet, too qiet. You stand up and run to the far side of
+          the room and find the neutron bomb in its container.
+          there's a keypad lock on the box and you need the code to
+          get the bomb out. If you get the code wrong 10 times then
+          the lock closes forever and you can't get the bomb. The
+          code is one digit from 1 to 5.
+          """))
     
     code = f"{randint(1,5)}" 
     guess = input("[Keypad]> ")
@@ -133,11 +133,11 @@ class LaserWeaponArmory(Scene):
       return 'the_bridge'
     else:
       print(dedent("""
-                  The lock buzzes one last time and the you hear a
-                  sickening melting sound as the mechanism is fused
-                  together. You decide to sit there, and finally the
-                  Gothons blow uo the ship from their ship and you die.
-                  """))
+            The lock buzzes one last time and the you hear a
+            sickening melting sound as the mechanism is fused
+            together. You decide to sit there, and finally the
+            Gothons blow uo the ship from their ship and you die.
+            """))
       return 'death'
 
 class TheBridge(Scene):
